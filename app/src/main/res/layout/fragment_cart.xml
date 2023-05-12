@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.CartFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cartRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/layout_cart_item"
+        android:layout_marginBottom="20dp"
+        android:layout_above="@+id/cardView"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="7dp"
+        app:cardCornerRadius="12dp"
+        android:layout_margin="5dp"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/totalItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Total item in Cart is "
+                android:textColor="@color/myColor"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/totalCost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Total Cost"
+                android:gravity="center"
+                android:textColor="@color/myColor"
+                android:textStyle="bold"
+                android:textSize="20sp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/checkOut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Checkout"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:textAllCaps="false"/>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>

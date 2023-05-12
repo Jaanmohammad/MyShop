@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.AuthVerificationActivity">
+
+    <RelativeLayout
+        android:id="@+id/rel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/phoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="+911234567890"
+            android:textColor="@color/black"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/wrongNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Wrong Number"
+            android:gravity="right"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@+id/phoneNumber"
+            android:layout_marginRight="20dp"
+            android:textSize="16sp" />
+
+
+
+    <EditText
+        android:id="@+id/otp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/wrongNumber"
+        android:background="@drawable/edit_background"
+        android:hint="Enter OTP"
+        android:maxLength="6"
+        android:inputType="number"
+        android:padding="10dp" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/otp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:backgroundTint="@color/myColor"
+        android:padding="10dp"
+        android:text="Next"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="don't received the code"
+        android:layout_below="@+id/submit"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/resend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Resend"
+        android:textColor="#0329FF"
+        android:textSize="18sp"
+        android:layout_below="@+id/text"
+        android:gravity="center"/>
+
+    </RelativeLayout>
+
+</ScrollView>
